@@ -1,0 +1,54 @@
+[gd_scene load_steps=4 format=3 uid="uid://do6a6bdkv5sen"]
+
+[ext_resource type="Texture2D" uid="uid://ctdy8p2h3sgwa" path="res://d2l0r5a-139fe926-6e3e-4fb0-bbb7-81fce6fe6967 (Custom).png" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://gq55spiim6he" path="res://ship.png" id="2_0hol4"]
+[ext_resource type="Script" uid="uid://bqyjsb5plr34x" path="res://sprite_2d.gd" id="3_q6r6c"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRectFull" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_epypp")
+stretch_mode = 2
+
+[node name="TextureRectScaled" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(1920, 1080)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 1923.0
+offset_bottom = 1079.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+texture = ExtResource("1_epypp")
+expand_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 283.0
+offset_top = 617.0
+offset_right = 466.0
+offset_bottom = 721.0
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+offset_left = 459.0
+offset_top = 616.0
+offset_right = 642.0
+offset_bottom = 720.0
+color = Color(1, 0, 1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(170, 677)
+texture = ExtResource("2_0hol4")
+script = ExtResource("3_q6r6c")
+
+[node name="Camera2D" type="Camera2D" parent="Sprite2D"]
