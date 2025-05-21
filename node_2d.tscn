@@ -1,21 +1,50 @@
-[gd_scene load_steps=4 format=3 uid="uid://do6a6bdkv5sen"]
+[gd_scene load_steps=6 format=3 uid="uid://do6a6bdkv5sen"]
 
 [ext_resource type="Texture2D" uid="uid://ctdy8p2h3sgwa" path="res://d2l0r5a-139fe926-6e3e-4fb0-bbb7-81fce6fe6967 (Custom).png" id="1_epypp"]
+[ext_resource type="Texture2D" uid="uid://dcxvwwml2xp2k" path="res://red.png" id="1_q6r6c"]
 [ext_resource type="Texture2D" uid="uid://gq55spiim6he" path="res://ship.png" id="2_0hol4"]
+[ext_resource type="Texture2D" uid="uid://b0fpmxjyfj5hs" path="res://white.png" id="2_kdubu"]
 [ext_resource type="Script" uid="uid://bqyjsb5plr34x" path="res://sprite_2d.gd" id="3_q6r6c"]
 
 [node name="Node2D" type="Node2D"]
 
+[node name="Sprite2DRed" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(361, 684)
+texture = ExtResource("1_q6r6c")
+
+[node name="Sprite2DWhite" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(562, 680)
+texture = ExtResource("2_kdubu")
+
+[node name="Sprite2DFull" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-2882, 29)
+texture = ExtResource("1_epypp")
+
+[node name="Sprite2DScaled" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(170.561, 675)
+scale = Vector2(0.23811, 0.459171)
+texture = ExtResource("1_epypp")
+
 [node name="TextureRectFull" type="TextureRect" parent="."]
+visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -6825.0
+offset_top = -1169.0
+offset_right = 1175.0
+offset_bottom = 1170.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_epypp")
 stretch_mode = 2
 
 [node name="TextureRectScaled" type="TextureRect" parent="."]
+visible = false
 custom_minimum_size = Vector2(1920, 1080)
 anchors_preset = 8
 anchor_left = 0.5
@@ -52,3 +81,4 @@ texture = ExtResource("2_0hol4")
 script = ExtResource("3_q6r6c")
 
 [node name="Camera2D" type="Camera2D" parent="Sprite2D"]
+position_smoothing_enabled = true
